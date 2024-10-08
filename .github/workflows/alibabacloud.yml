@@ -52,7 +52,7 @@ jobs:
         # Username for the destination registry
         destination_registry_username: confucian_tju@hotmail.com
         # Password for the source registry
-        source_registry_password: dckr_pat_P6ZCB3hz3Z4SiQP4-tw4qmKWF50
+        source_registry_password:  ${{ secrets.YANG_DOCKERHUB_SECRET }}
         # Password for the destination registry
         destination_registry_password: Yrs@201202  
         
