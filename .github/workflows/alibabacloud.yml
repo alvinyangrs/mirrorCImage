@@ -41,7 +41,7 @@ env:
 
   SOURCE_REGISTRY_USERNAME: rensheng.yang@windriver.com
   DESTINATION_REGISTRY_USERNAME: confucian_tju@hotmail.com
-  SOURCE_REGISTRY_PASSWORD: yangrensheng
+  SOURCE_REGISTRY_PASSWORD: dckr_pat_P6ZCB3hz3Z4SiQP4-tw4qmKWF50
   DESTINATION_REGISTRY_PASSWORD: Yrs@201202  
 
 permissions:
