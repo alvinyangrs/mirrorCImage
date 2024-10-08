@@ -36,6 +36,25 @@ jobs:
     environment: production
 
     steps:
+    - name: Sync Docker Image to Registry
+      # You may pin to the exact commit or the version.
+      # uses: onichandame/docker-registry-sync-action@299248f5fcdacb8229dba17caf36178e85137208
+      uses: onichandame/docker-registry-sync-action@1.0.0
+      with:
+        # the source repository
+        source_repository: 'registry.docker.io/elxrlinux/elxr:12.6.1.0-distroless-python'
+        # the username for the source registry
+        source_username: rensheng.yang@windriver.com
+        # the password for the source registry
+        source_password: dckr_pat_P6ZCB3hz3Z4SiQP4-tw4qmKWF50
+        # the target repository
+        target_repository: 'registry.cn-hangzhou.aliyuncs.com/ryang-test/elxrlinux/elxr:12.6.1.0-distroless-python'
+        # the username for the target registry
+        target_username: confucian_tju@hotmail.com
+        # the password for the target registry
+        target_password: Yrs@201202
+          
+    
     - name: Checkout
       uses: actions/checkout@v4
 
