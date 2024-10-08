@@ -45,7 +45,16 @@ jobs:
         username: rensheng.yang@windriver.com
         # Password or personal access token used to log against the Docker registry
         password: dckr_pat_P6ZCB3hz3Z4SiQP4-tw4qmKWF50
-          
+        
+    - name: docker-push
+      env:
+        GH_REPO: github.com/${{ env.USER }}/${{ env.DEPLOYMENT_REPO_NAME }}
+        API_TOKEN: ${{ secrets.API_TOKEN }}
+        DOCKER_APP_URL: ${{ env.DOCKER_REGISTRY_URL }}/${{ env.USER }}/plant-simulator
+      run: |
+        docker pull 'registry.docker.io/elxrlinux/elxr:12.6.1.0-distroless-python'
+        
+
     - name: Docker Image Transfer
       # You may pin to the exact commit or the version.
       # uses: alex289/docker-image-transfer-action@df401fa5ebbaf300aae4f9b223b039cc443c3537
