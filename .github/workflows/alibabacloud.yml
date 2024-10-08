@@ -36,6 +36,26 @@ jobs:
     environment: production
 
     steps:
+
+          
+    - name: Docker Image Transfer
+      # You may pin to the exact commit or the version.
+      # uses: alex289/docker-image-transfer-action@df401fa5ebbaf300aae4f9b223b039cc443c3537
+      uses: alex289/docker-image-transfer-action@v1.0.0
+      with:
+        # Source Docker image repository (e.g., docker.io/user/source-repo:tag)
+        source: 'registry.docker.io/elxrlinux/elxr:12.6.1.0-distroless-python'
+        # Destination Docker image repository (e.g., docker.io/user/source-repo:tag)
+        destination: 'registry.cn-hangzhou.aliyuncs.com/ryang-test/elxrlinux/elxr:12.6.1.0-distroless-python'
+        # Username for the source registry
+        source_registry_username: rensheng.yang@windriver.com
+        # Username for the destination registry
+        destination_registry_username: confucian_tju@hotmail.com
+        # Password for the source registry
+        source_registry_password: dckr_pat_P6ZCB3hz3Z4SiQP4-tw4qmKWF50
+        # Password for the destination registry
+        destination_registry_password: Yrs@201202  
+        
     - name: Sync Docker Image to Registry
       # You may pin to the exact commit or the version.
       # uses: onichandame/docker-registry-sync-action@299248f5fcdacb8229dba17caf36178e85137208
@@ -53,8 +73,7 @@ jobs:
         target_username: confucian_tju@hotmail.com
         # the password for the target registry
         target_password: Yrs@201202
-          
-    
+        
     - name: Checkout
       uses: actions/checkout@v4
 
