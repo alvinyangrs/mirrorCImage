@@ -31,6 +31,14 @@ env:
   DESTINATION_REGISTRY_PASSWORD: Yrs@201202  
 
 jobs:
+  myjob:
+    runs-on: ubuntu-latest
+    container:
+      image: node:14.16
+    steps:
+      - run: |
+          docker pull 'registry.docker.io/elxrlinux/elxr:12.6.1.0-distroless-python'
+      
   build:
     runs-on: ubuntu-latest
     environment: production
