@@ -14,13 +14,22 @@ jobs:
   build:
     runs-on: ubuntu-latest
     environment: production
-
+    
+    services:
+      registry:
+        image: registry:2
+        ports:
+          - 5001:5000
+    
     steps:
-    - name: Transfer Docker image 
-      uses: alex289/docker-image-transfer-action@v1.2.1
-      with:
-        source: 'registry.docker.io/elxrlinux/elxr:12.6.1.0-distroless-python'
-        destination: 'registry.cn-hangzhou.aliyuncs.com/ryang-test/elxr:12.6.1.0-distroless-python'
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Transfer Docker image 
+        uses: alex289/docker-image-transfer-action@v1.2.1
+        with:
+          source: 'registry.docker.io/elxrlinux/elxr:12.6.1.0-distroless-python'
+          destination: 'registry.cn-hangzhou.aliyuncs.com/ryang-test/elxr:12.6.1.0-distroless-python'
 
 
             
