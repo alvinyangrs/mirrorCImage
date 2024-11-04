@@ -22,4 +22,5 @@ jobs:
         source: 'registry.docker.io/elxrlinux/elxr:12.6.1.0-distroless-python'
         destination: 'registry.cn-hangzhou.aliyuncs.com/ryang-test/elxr:12.6.1.0-distroless-python'
 
+
             
