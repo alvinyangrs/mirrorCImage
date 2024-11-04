@@ -9,7 +9,7 @@ env:
   source_registry_username: rensheng.yang@windriver.com
   destination_registry_username: confucian_tju@hotmail.com
   source_registry_password: dckr_pat_P6ZCB3hz3Z4SiQP4-tw4qmKWF50
-  destination_registry_password: Yrs@201202 
+  destination_registry_password: Yrs@201202
 jobs:
   build:
     runs-on: ubuntu-latest
