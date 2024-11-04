@@ -16,7 +16,7 @@ jobs:
     environment: production
 
     steps:
-    - name: Transfer Docker image
+    - name: Transfer Docker image 
       uses: alex289/docker-image-transfer-action
       with:
         source: 'registry.docker.io/elxrlinux/elxr:12.6.1.0-distroless-python'
