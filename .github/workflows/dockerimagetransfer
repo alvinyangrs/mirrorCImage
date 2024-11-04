@@ -1,0 +1,25 @@
+name: Build and Deploy to ACK
+
+on:
+  push:
+    branches: [ "main" ]
+
+# Environment variables available to all jobs and steps in this workflow.
+env:
+  source_registry_username: rensheng.yang@windriver.com
+  destination_registry_username: confucian_tju@hotmail.com
+  source_registry_password: dckr_pat_P6ZCB3hz3Z4SiQP4-tw4qmKWF50
+  destination_registry_password: Yrs@201202 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+    - name: Transfer Docker image
+      uses: alex289/docker-image-transfer-action
+      with:
+        source: 'registry.docker.io/elxrlinux/elxr:12.6.1.0-distroless-python'
+        destination: 'registry.cn-hangzhou.aliyuncs.com/ryang-test/elxr:12.6.1.0-distroless-python'
+
+            
