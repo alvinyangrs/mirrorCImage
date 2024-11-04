@@ -17,7 +17,7 @@ jobs:
 
     steps:
     - name: Transfer Docker image 
-      uses: alex289/docker-image-transfer-action
+      uses: alex289/docker-image-transfer-action@v1.2.1
       with:
         source: 'registry.docker.io/elxrlinux/elxr:12.6.1.0-distroless-python'
         destination: 'registry.cn-hangzhou.aliyuncs.com/ryang-test/elxr:12.6.1.0-distroless-python'
