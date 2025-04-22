@@ -6,7 +6,7 @@ on:
 
 # Environment variables available to all jobs and steps in this workflow.
 env:
-
+  source: 'node:lts-alpine'
 jobs:
   build:
     runs-on: ubuntu-latest
