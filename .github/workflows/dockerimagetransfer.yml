@@ -26,7 +26,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Transfer Docker image 
-        uses: alex289/docker-image-transfer-action@v1.2.1
+        uses: alvinyangrs/docker-image-transfer-action # alex289/docker-image-transfer-action@v1.2.1
         with:
           source: 'node:lts-alpine'
           destination: 'registry.cn-hangzhou.aliyuncs.com/ryang-test/node:lts-alpine'
