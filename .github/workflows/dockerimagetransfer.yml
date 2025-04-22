@@ -31,5 +31,10 @@ jobs:
         with:
           source: 'node:lts-alpine'
           destination: 'registry.cn-hangzhou.aliyuncs.com/ryang-test/test:lts-alpine1'
+          source_registry_username: 
+          destination_registry_username: confucian_tju@hotmail.com
+          source_registry_password: 
+          destination_registry_password: Li69nux*1234
+          destination_registry: registry.cn-hangzhou.aliyuncs.com6
 
 
