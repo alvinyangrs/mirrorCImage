@@ -6,10 +6,10 @@ on:
 
 # Environment variables available to all jobs and steps in this workflow.
 env:
-  source_registry_username: rensheng.yang@windriver.com
+  source_registry_username: 
   destination_registry_username: confucian_tju@hotmail.com
-  source_registry_password: dckr_pat_P6ZCB3hz3Z4SiQP4-tw4qmKWF50
-  destination_registry_password: Yrs@201202
+  source_registry_password: 
+  destination_registry_password: Li69nux*1234
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -28,8 +28,8 @@ jobs:
       - name: Transfer Docker image 
         uses: alex289/docker-image-transfer-action@v1.2.1
         with:
-          source: 'elxrlinux/elxr:12.6.1.0-distroless-python'
-          destination: 'registry.cn-hangzhou.aliyuncs.com/ryang-test/elxr:12'
+          source: 'node:lts-alpine'
+          destination: 'registry.cn-hangzhou.aliyuncs.com/ryang-test/node:lts-alpine'
 
 
             
