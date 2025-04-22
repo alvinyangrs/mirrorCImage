@@ -6,11 +6,7 @@ on:
 
 # Environment variables available to all jobs and steps in this workflow.
 env:
-  source_registry_username: 
-  destination_registry_username: confucian_tju@hotmail.com
-  source_registry_password: 
-  destination_registry_password: Li69nux*1234
-  destination_registry: registry.cn-hangzhou.aliyuncs.com
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -35,6 +31,6 @@ jobs:
           destination_registry_username: confucian_tju@hotmail.com
           source_registry_password: 
           destination_registry_password: Li69nux*1234
-          destination_registry: registry.cn-hangzhou.aliyuncs.com6
+          destination_registry: registry.cn-hangzhou.aliyuncs.com
 
 
