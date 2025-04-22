@@ -10,7 +10,7 @@ env:
   destination_registry_username: confucian_tju@hotmail.com
   source_registry_password: 
   destination_registry_password: Li69nux*1234
-  destination_registry: registry.cn-hangzhou.aliyuncs.com1
+  destination_registry: registry.cn-hangzhou.aliyuncs.com2
 jobs:
   build:
     runs-on: ubuntu-latest
