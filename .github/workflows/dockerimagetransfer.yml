@@ -25,8 +25,8 @@ jobs:
       - name: Transfer Docker image 
         uses: alvinyangrs/docker-image-transfer-action@main # alex289/docker-image-transfer-action@v1.2.1
         with:
-          source: 'node:lts-alpine'
-          destination: 'registry.cn-hangzhou.aliyuncs.com/ryang-test/test:lts-alpine1'
+          source: 'openproject/openproject:16'
+          destination: 'registry.cn-hangzhou.aliyuncs.com/ryang-test/openproject:16'
           source_registry_username: 
           destination_registry_username: confucian_tju@hotmail.com
           source_registry_password: 
